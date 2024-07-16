@@ -5,7 +5,8 @@ from cinema.views import (
     ActorViewSet,
     GenreViewSet,
     CinemaHallViewSet,
-    MovieSessionViewSet)
+    MovieSessionViewSet
+)
 from rest_framework import routers
 
 

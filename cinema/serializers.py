@@ -5,7 +5,8 @@ from cinema.models import (
     Actor,
     CinemaHall,
     Genre,
-    MovieSession)
+    MovieSession
+)
 
 
 class ActorSerializer(serializers.ModelSerializer):
@@ -16,7 +17,8 @@ class ActorSerializer(serializers.ModelSerializer):
             "id",
             "first_name",
             "last_name",
-            "full_name")
+            "full_name"
+        )
 
 
 class GenreSerializer(serializers.ModelSerializer):
@@ -36,7 +38,8 @@ class MovieSerializer(serializers.ModelSerializer):
             "description",
             "duration",
             "genres",
-            "actors")
+            "actors"
+        )
 
 
 class MovieSessionSerializer(serializers.ModelSerializer):
@@ -47,7 +50,8 @@ class MovieSessionSerializer(serializers.ModelSerializer):
             "id",
             "show_time",
             "movie",
-            "cinema_hall")
+            "cinema_hall"
+        )
 
 
 class CinemaHallSerializer(serializers.ModelSerializer):
@@ -59,7 +63,8 @@ class CinemaHallSerializer(serializers.ModelSerializer):
             "name",
             "rows",
             "seats_in_row",
-            "capacity")
+            "capacity"
+        )
 
 
 class MovieSessionListSerializer(MovieSessionSerializer):
@@ -87,12 +92,14 @@ class MovieListSerializer(MovieSerializer):
     actors = serializers.SlugRelatedField(
         many=True,
         read_only=True,
-        slug_field="full_name")
+        slug_field="full_name"
+    )
 
     genres = serializers.SlugRelatedField(
         many=True,
         read_only=True,
-        slug_field="name")
+        slug_field="name"
+    )
 
 
 class MovieRetrieveSerializer(MovieSerializer):

@@ -5,7 +5,8 @@ from cinema.models import (
     Genre,
     Actor,
     CinemaHall,
-    MovieSession)
+    MovieSession
+)
 from cinema.serializers import (
     MovieSerializer,
     MovieListSerializer,
@@ -15,7 +16,8 @@ from cinema.serializers import (
     MovieSessionRetrieveSerializer,
     ActorSerializer,
     GenreSerializer,
-    CinemaHallSerializer)
+    CinemaHallSerializer
+)
 
 
 class MovieViewSet(viewsets.ModelViewSet):
